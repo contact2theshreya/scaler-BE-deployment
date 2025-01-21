@@ -5,7 +5,9 @@ http-acess web page over internet
 
 ssh-acess computer over internet,can login to remote computer
 
-by amazon public ip u cana cess website
+by amazon public ip(not fixed) u cana cess website
+u get differet ip whenever u restart instance
+Amazon has service called elastic IP to buy static ip for production env
 
 # EC2
 can acess it from anywhere
@@ -53,9 +55,24 @@ Now in browser go to aws ec2 publicip:port that is 65.0.61.40:5000
 By default awsfor security pupose block all of the port of this machine ,it only allow by ssh but we want to connect via http on port 5000
 so go to security and give inbound rule in security group
 ![alt text](image-9.png)
-clcik on security group and edit inbound rules
+clcik on security group and edit inbound rules and select to acess it from any amchine
 ![alt text](image-10.png)
 ![alt text](image-11.png)
+U can buy an staic ip from elastic ip service and associate to machine ten ip of machine will not change whene u restart system-aws will not charge if u allocate elastic ip to ec2 machine
+![alt text](image-12.png)
+![alt text](image-13.png) click on associate
+whwen u shout down instance and restated , uneed to restrt flask applicatin
+-cd myproject
+-run flask server
+elasticip:port
+![alt text](image-15.png)
+![alt text](image-14.png)
+# Create rds instance
+![alt text](image-16.png)
+password is same as username
+we only want oup application server to acess database so choose -public acess no
+RDS doesn't assign a public IP address to the database. Only Amazon EC2 instances and other resources inside the VPC can connect to your database. Choose one or more VPC security groups that specify which resources can connect to the databas
+![alt text](image-17.png)
  
 
 
