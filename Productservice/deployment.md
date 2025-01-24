@@ -57,4 +57,23 @@ postman collection is saved-with name deployment
 
 1) default port of http is 80,public user will hit on port 80 ,so LB will receive on port80 and forward it to port 5000 to my application
 2) use this for instance profile-https://youtu.be/oU8yAF4Y90Y
-3) 
+
+
+## Deploy product service
+3) add issuer url variable in authenticationservice.
+4) unfortunately while running test cases environment variable is not read so comment out test case]
+5) create new application of product servoice in EBS
+6) instance profile is superset of role
+
+![img_41.png](img_41.png)
+12) ![img_42.png](img_42.png)
+13) ![img_43.png](img_43.png)
+14) 
+## Note
+For further research u can try with
+7) ![img_38.png](img_38.png)
+8) instance tyoe-micro
+9) if any request comes to port 80 pass that to default process
+10) ![img_39.png](img_39.png)
+11) ![img_40.png](img_40.png)
+12) https://jun711.github.io/aws/how-to-pause-or-stop-elastic-beanstalk-environment-from-running/#google_vignette
